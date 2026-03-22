@@ -4,10 +4,6 @@ A full-stack mini CRM built for construction companies to manage client inquirie
 
 ---
 
-🌐 Live Demo
-
-👉 (Add your deployed frontend link here)
-
 
 📸 Screenshots
 <img width="1890" height="886" alt="Login-Page" src="https://github.com/user-attachments/assets/b61ad834-8fb0-4f61-8298-7a54e126cdc0" />
