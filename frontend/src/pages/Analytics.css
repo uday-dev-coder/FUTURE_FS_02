@@ -1,0 +1,116 @@
+.analytics-page { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.analytics-hero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--c);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.stat-box:hover { transform: translateY(-2px); }
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--c);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.stat-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.chart-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* Bar chart */
+.bar-chart { display: flex; flex-direction: column; gap: 12px; }
+
+.bar-row { display: flex; align-items: center; gap: 10px; }
+
+.bar-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  width: 130px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar-track {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.8s ease;
+}
+
+.bar-value { font-size: 12px; font-weight: 700; width: 24px; text-align: right; }
+
+/* Donut chart */
+.donut-wrap { display: flex; align-items: center; justify-content: center; }
+
+.donut-chart { display: flex; align-items: center; gap: 20px; }
+
+.donut-legend { display: flex; flex-direction: column; gap: 6px; }
+
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; }
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-label { color: var(--text-secondary); flex: 1; }
+.legend-val { font-weight: 700; color: var(--text-primary); margin-left: 4px; }
+
+.no-data { color: var(--text-muted); font-size: 13px; text-align: center; padding: 40px 0; }
+
+@media (max-width: 1100px) {
+  .analytics-hero { grid-template-columns: repeat(2, 1fr); }
+  .charts-grid { grid-template-columns: 1fr; }
+}
